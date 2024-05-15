@@ -6,7 +6,7 @@ services:
     image: babadzhanyan/php-fpm:${PHP_VERSION}
     volumes:
       - ../:/var/www/html/:rw
-      - ./logs/php.log:/var/log/fpm-php.www.log:rw
+      - ./logs/php.log:/var/log/php-fpm.log:rw
       - ./hosts.sh:/usr/local/etc/hosts.sh
 
   nginx:
