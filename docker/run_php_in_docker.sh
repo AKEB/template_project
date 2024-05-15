@@ -2,7 +2,7 @@
 
 HOST_DIR=${1}/
 DOCKER_DIR="/var/www/html/"
-SCRIPT_DIR=`dirname ${2}`/
+SCRIPT_DIR=`dirname "${2}"`/
 FILE_NAME=${2/"$SCRIPT_DIR"/""}
 SCRIPT_DIR=${SCRIPT_DIR/"$HOST_DIR"/""}
 

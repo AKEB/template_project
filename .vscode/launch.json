@@ -4,13 +4,11 @@
 	// Для получения дополнительной информации посетите: https://go.microsoft.com/fwlink/?linkid=830387
 	"version": "0.2.0",
 	"configurations": [
-
 		{
 			"name": "PHP in Docker",
 			"type": "f5anything",
 			"request": "launch",
-			"command": "cd \"${workspaceFolder}\" && \"${workspaceFolder}/docker/run_php_in_docker.sh\" \"${workspaceFolder}/\" ${file}"
+			"command": "cd \"${workspaceFolder}\" && \"${workspaceFolder}/docker/run_php_in_docker.sh\" \"${workspaceFolder}\" ${file}"
 		},
-
 	]
 }
