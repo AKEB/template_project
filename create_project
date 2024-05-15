@@ -33,12 +33,5 @@ PHP_VERSION=${input_php_version}
 DOMAIN_NAME=${input_domain_name}
 " > "${PWD}/docker/.env"
 
-
-
-# wget --no-check-certificate -q -O "${PWD}/.gitignore" "https://raw.githubusercontent.com/AKEB/template_project/main/.gitignore"
-# wget --no-check-certificate -q -O "${PWD}/.editorconfig" "https://raw.githubusercontent.com/AKEB/template_project/main/.editorconfig"
-
-
-# echo <<EOF
-
-# EOF > ${PWD}/.editorconfig
+touch "${PWD}/docker/logs/error.log"
+touch "${PWD}/docker/logs/access.log"

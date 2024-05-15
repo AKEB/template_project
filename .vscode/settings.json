@@ -1,0 +1,12 @@
+{
+  "phpunit.execPath": "./vendor/bin/phpunit",
+  "search.useGlobalIgnoreFiles": true,
+  "git.ignoreLimitWarning": true,
+  "files.exclude": {
+    "**/.DS_Store": true,
+  },
+  "code-runner.runInTerminal": true,
+  "code-runner.executorMap": {
+    "php": "$workspaceRoot/docker/run_php_in_docker.sh $workspaceRoot/wwwroot $fullFileName"
+  }
+}
