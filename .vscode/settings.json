@@ -7,6 +7,6 @@
   },
   "code-runner.runInTerminal": true,
   "code-runner.executorMap": {
-    "php": "$workspaceRoot/docker/run_php_in_docker.sh $workspaceRoot/wwwroot $fullFileName"
+    "php": "\"$workspaceRoot/docker/run_php_in_docker.sh\" \"$workspaceRoot\" $fullFileName"
   }
 }
