@@ -40,6 +40,11 @@ touch "${PWD}/docker/logs/error.log"
 touch "${PWD}/docker/logs/access.log"
 touch "${PWD}/docker/logs/php.log"
 
+chmod a+w "${PWD}/docker/logs/error.log"
+chmod a+w "${PWD}/docker/logs/access.log"
+chmod a+w "${PWD}/docker/logs/php.log"
+
 cd docker
+docker compose up -d
 docker compose exec -t php-fpm bash -c "composer install"
 cd ../

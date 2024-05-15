@@ -15,7 +15,8 @@ services:
     volumes:
       - ../:/var/www/html/:rw
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
-      - ./logs/:/var/log/nginx/:rw
+      - ./logs/error.log:/var/log/nginx/error.log:rw
+      - ./logs/access.log:/var/log/nginx/access.log:rw
     ports:
       - ${NGINX_PORT}:80
       - ${NGINX_SSL_PORT}:443
