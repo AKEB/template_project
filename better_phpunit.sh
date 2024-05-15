@@ -9,7 +9,7 @@ for ((argnum = 1; argnum <= $#; argnum++)); do
   ARGS="${ARG} "
 done
 
-echo "ARGS = ${ARGS}"
+# echo "ARGS = ${ARGS}"
 
 cd docker
 docker compose up -d

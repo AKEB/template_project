@@ -3,6 +3,7 @@
     "git.ignoreLimitWarning": true,
     "files.exclude": {
         "**/.DS_Store": true,
+        "**/.phpunit.cache/": true,
     },
     "code-runner.runInTerminal": true,
     "code-runner.executorMap": {

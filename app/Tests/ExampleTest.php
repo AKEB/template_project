@@ -1,7 +1,7 @@
 <?php
 error_reporting(E_ALL);
 
-class TestExample extends PHPUnit\Framework\TestCase {
+class ExampleTest extends PHPUnit\Framework\TestCase {
 	public function setUp(): void {
 	}
 
