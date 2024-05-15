@@ -8,7 +8,7 @@ read project_name
 # read domain_name
 
 project_code=`echo ${project_name} | tr '[:upper:]' '[:lower:]'`
-project_code=echo "${project_code/ /_}"
+project_code=echo "${project_code/" "/"_"}"
 
 echo ${project_code}
 
