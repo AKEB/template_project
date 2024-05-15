@@ -1,0 +1,7 @@
+{
+  "name": "__PROJECT_CODE__",
+  "require": {
+      "akeb/curlget": "@stable",
+      "geoip2/geoip2": "@stable"
+  }
+}

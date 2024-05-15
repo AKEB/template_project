@@ -22,7 +22,8 @@ rm -rf "${PWD}/.git/"
 rm -rf "${PWD}/create_project"
 rm -rf "${PWD}/README.md"
 
-sed -i ".bak" -e "s/__PROJECT_CODE__/${PROJECT_CODE}/g" "${PWD}/docker/docker-compose.yml"
+sed -i ".bak" -e "s/__PROJECT_CODE__/${PROJECT_CODE}/g" "${PWD}/docker/docker-compose.yml" && rm -rf "${PWD}/docker/docker-compose.yml.bak"
+sed -i ".bak" -e "s/__PROJECT_CODE__/${PROJECT_CODE}/g" "${PWD}/composer.json" && rm -rf "${PWD}/composer.json.bak"
 
 echo "
 NGINX_PORT=${input_http_port}
