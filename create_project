@@ -2,8 +2,8 @@
 
 echo ${PWD}
 
-# echo -n "Enter project name: "
-# read project_name
+echo -n "Enter project name: "
+read project_name
 # echo -n "Enter site domain: "
 # read domain_name
 
@@ -12,6 +12,8 @@ git clone https://github.com/AKEB/template_project.git "${PWD}"
 rm -rf "${PWD}/.git/"
 rm -rf "${PWD}/create_project"
 rm -rf "${PWD}/README.md"
+
+sed -i -e 's/__PROJECT_NAME__/${project_name}/g' "${PWD}/docker/docker-compose.yml"
 
 
 # wget --no-check-certificate -q -O "${PWD}/.gitignore" "https://raw.githubusercontent.com/AKEB/template_project/main/.gitignore"
