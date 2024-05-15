@@ -1,7 +1,5 @@
 #!/bin/bash
 
-echo ${PWD}
-
 echo -n "Enter project name: "
 read input_project_name
 echo -n "Enter site domain: "
@@ -45,7 +43,7 @@ chmod a+w "${PWD}/docker/logs/php.log"
 
 cd docker
 docker compose up -d
-docker compose exec -t php-fpm bash -c "composer install"
+docker compose exec -t php-fpm bash -c "composer install --prefer-install=auto --no-interaction;"
 cd ../
 
 git init

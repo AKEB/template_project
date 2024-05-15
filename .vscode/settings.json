@@ -1,12 +1,21 @@
 {
-  "phpunit.execPath": "./vendor/bin/phpunit",
-  "search.useGlobalIgnoreFiles": true,
-  "git.ignoreLimitWarning": true,
-  "files.exclude": {
-    "**/.DS_Store": true,
-  },
-  "code-runner.runInTerminal": true,
-  "code-runner.executorMap": {
-    "php": "\"$workspaceRoot/docker/run_php_in_docker.sh\" \"$workspaceRoot/app\" $fullFileName"
-  }
+    "search.useGlobalIgnoreFiles": true,
+    "git.ignoreLimitWarning": true,
+    "files.exclude": {
+        "**/.DS_Store": true,
+    },
+    "code-runner.runInTerminal": true,
+    "code-runner.executorMap": {
+        "php": "\"$workspaceRoot/docker/run_php_in_docker.sh\" \"$workspaceRoot/app\" $fullFileName"
+    },
+    "phpunit.command": "./phpunit.sh ",
+    "phpunit.phpunit": "",
+    "phpunit.args": [],
+    "better-phpunit.docker.enable": true,
+    "better-phpunit.docker.command": "./better_phpunit.sh ",
+    "better-phpunit.docker.paths": {
+        "/Users/akeb/Work/Test Project/app/": "/var/www/html/"
+    },
+    "phpunit.testExplorer.include": "**/Tests/**/*Test.php",
+
 }
