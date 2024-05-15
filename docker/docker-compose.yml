@@ -1,5 +1,5 @@
 version: "3.9"
-name: "__PROJECT_NAME__"
+name: "__PROJECT_CODE__"
 services:
 
   php-fpm:
