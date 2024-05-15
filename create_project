@@ -39,3 +39,7 @@ DOMAIN_NAME=${input_domain_name}
 touch "${PWD}/docker/logs/error.log"
 touch "${PWD}/docker/logs/access.log"
 touch "${PWD}/docker/logs/php.log"
+
+cd docker
+docker compose exec -t php-fpm bash -c "composer install"
+cd ../
