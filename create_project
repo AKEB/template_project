@@ -3,14 +3,18 @@
 echo ${PWD}
 
 echo -n "Enter project name: "
-read project_name
-# echo -n "Enter site domain: "
-# read domain_name
+read input_project_name
+echo -n "Enter site domain: "
+read input_domain_name
+echo -n "Enter PHP Version: "
+read input_php_version
+echo -n "Enter HTTP Port: "
+read input_http_port
+echo -n "Enter HTTPS Port: "
+read input_https_port
 
-PROJECT_CODE=`echo ${project_name} | tr '[:upper:]' '[:lower:]'`
+PROJECT_CODE=`echo ${input_project_name} | tr '[:upper:]' '[:lower:]'`
 PROJECT_CODE=`echo "${PROJECT_CODE// /_}"`
-
-echo ${PROJECT_CODE}
 
 git clone https://github.com/AKEB/template_project.git "${PWD}"
 
@@ -19,6 +23,17 @@ rm -rf "${PWD}/create_project"
 rm -rf "${PWD}/README.md"
 
 sed -i -e "s/__PROJECT_CODE__/${PROJECT_CODE}/g" "${PWD}/docker/docker-compose.yml"
+sed -i -e "s/__DOMAIN_NAME__/${input_domain_name}/g" "${PWD}/docker/nginx/default.conf"
+
+echo "
+NGINX_PORT=${input_http_port}
+NGINX_SSL_PORT=${input_https_port}
+
+PHP_VERSION=${input_php_version}
+DOMAIN_NAME=${input_domain_name}
+
+" > "${PWD}/docker/.env"
+
 
 
 # wget --no-check-certificate -q -O "${PWD}/.gitignore" "https://raw.githubusercontent.com/AKEB/template_project/main/.gitignore"
