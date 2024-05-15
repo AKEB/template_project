@@ -11,4 +11,4 @@ for ((argnum = 3; argnum <= $#; argnum++)); do
   ARGS="${ARGS}${!argnum} "
 done
 
-/usr/local/bin/docker compose -f "${HOST_DIR}/docker/docker-compose.yml" exec -t php-fpm bash -c "cd \"${DOCKER_DIR}${SCRIPT_DIR}\" && php \"${FILE_NAME}\" ${ARGS}"
+/usr/local/bin/docker compose -f "${HOST_DIR}/docker/docker-compose.yml" exec -t php-fpm bash -c "cd \"${DOCKER_DIR}${SCRIPT_DIR}app/\" && php \"${FILE_NAME}\" ${ARGS}"

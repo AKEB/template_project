@@ -23,9 +23,8 @@ rm -rf "${PWD}/create_project"
 rm -rf "${PWD}/README.md"
 
 sed -i ".bak" -e "s/__PROJECT_CODE__/${PROJECT_CODE}/g" "${PWD}/docker/docker-compose.yml" && rm -rf "${PWD}/docker/docker-compose.yml.bak"
-sed -i ".bak" -e "s/__PROJECT_CODE__/${PROJECT_CODE}/g" "${PWD}/composer.json" && rm -rf "${PWD}/composer.json.bak"
-
-sed -i ".bak" -e "s/__DOMAIN_NAME__/${input_domain_name}/g" "${PWD}/config.php" && rm -rf "${PWD}/config.php.bak"
+sed -i ".bak" -e "s/__PROJECT_CODE__/${PROJECT_CODE}/g" "${PWD}/app/composer.json" && rm -rf "${PWD}/app/composer.json.bak"
+sed -i ".bak" -e "s/__DOMAIN_NAME__/${input_domain_name}/g" "${PWD}/app/config.php" && rm -rf "${PWD}/app/config.php.bak"
 
 
 echo "
