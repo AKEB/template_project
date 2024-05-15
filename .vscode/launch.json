@@ -8,7 +8,7 @@
 			"name": "PHP in Docker",
 			"type": "f5anything",
 			"request": "launch",
-			"command": "cd \"${workspaceFolder}app/\" && \"${workspaceFolder}/docker/run_php_in_docker.sh\" \"${workspaceFolder}app/\" ${file}"
+			"command": "cd \"${workspaceFolder}/app/\" && \"${workspaceFolder}/docker/run_php_in_docker.sh\" \"${workspaceFolder}/app\" \"${file}\""
 		},
 	]
 }
