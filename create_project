@@ -2,13 +2,20 @@
 
 echo ${PWD}
 
-echo -n "Enter project name: "
-read project_name
-echo -n "Enter site domain: "
-read domain_name
+# echo -n "Enter project name: "
+# read project_name
+# echo -n "Enter site domain: "
+# read domain_name
 
-wget --no-check-certificate -q -O "${PWD}/.gitignore" "https://raw.githubusercontent.com/AKEB/template_project/main/.gitignore"
-wget --no-check-certificate -q -O "${PWD}/.editorconfig" "https://raw.githubusercontent.com/AKEB/template_project/main/.editorconfig"
+git clone https://github.com/AKEB/template_project.git "${PWD}"
+
+rm -rf "${PWD}/.git/"
+rm -rf "${PWD}/create_project"
+rm -rf "${PWD}/README.md"
+
+
+# wget --no-check-certificate -q -O "${PWD}/.gitignore" "https://raw.githubusercontent.com/AKEB/template_project/main/.gitignore"
+# wget --no-check-certificate -q -O "${PWD}/.editorconfig" "https://raw.githubusercontent.com/AKEB/template_project/main/.editorconfig"
 
 
 # echo <<EOF
