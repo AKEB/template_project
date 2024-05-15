@@ -22,8 +22,7 @@ rm -rf "${PWD}/.git/"
 rm -rf "${PWD}/create_project"
 rm -rf "${PWD}/README.md"
 
-sed -i -e "s/__PROJECT_CODE__/${PROJECT_CODE}/g" "${PWD}/docker/docker-compose.yml"
-sed -i -e "s/__DOMAIN_NAME__/${input_domain_name}/g" "${PWD}/docker/nginx/default.conf"
+sed -i bak -e "s/__PROJECT_CODE__/${PROJECT_CODE}/g" "${PWD}/docker/docker-compose.yml"
 
 echo "
 NGINX_PORT=${input_http_port}
