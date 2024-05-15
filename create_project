@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo ${PWD}
+
+echo -n "Enter project name: "
+read project_name
+echo -n "Enter site domain: "
+read domain_name
+
+wget --no-check-certificate -q -O "${PWD}/.gitignore" "https://raw.githubusercontent.com/AKEB/template_project/main/.gitignore"
+wget --no-check-certificate -q -O "${PWD}/.editorconfig" "https://raw.githubusercontent.com/AKEB/template_project/main/.editorconfig"
+
+
+# echo <<EOF
+
+# EOF > ${PWD}/.editorconfig
