@@ -1,5 +1,5 @@
-.*
-*.log
-config.php
-.env
+/docker/logs/*.log
+/config.php
+/.env
+/docker/.env
 !*.example
